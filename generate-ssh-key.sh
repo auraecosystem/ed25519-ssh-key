@@ -1,0 +1,1 @@
+ssh-keygen -t rsa -f github_rsa -N '' -C "email@example.com"
