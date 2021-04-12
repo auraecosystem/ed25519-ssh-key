@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# references:
+# - https://blog.josefsson.org/tag/ed25519/
+# - https://www.gnupg.org/documentation/manuals/gnupg/OpenPGP-Key-Management.html
+
 # use a new and unique key name.
 # it will be necessary to have both old and new keys while transitioning.
 # eg: for password-store re-encryption.
