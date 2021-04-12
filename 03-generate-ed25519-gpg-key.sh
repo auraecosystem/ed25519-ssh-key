@@ -2,7 +2,7 @@
 
 # use a new and unique key name.
 # it will be necessary to have both old and new keys while transitioning.
-# eg: for password store re-encryption.
+# eg: for password-store re-encryption.
 key_name="rob thijssen <rthijssen@gmail.com>"
 
 # generate ed25519 master key with no expiration

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# generate key and add to keyring
+# generate and add new ed25519 ssh key
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "rob thijssen <rthijssen@gmail.com>"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
