@@ -36,6 +36,7 @@ if [ -n "${new_key_fingerprint}" ]; then
   # gpg --digest-algo SHA512 --default-key ${new_key_fingerprint} --clearsign transition-statement.md
   
   # tell git about signing key
+  # https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
   new_signing_key_id=$(if [[ $(gpg --list-secret-keys --keyid-format LONG ${new_key_fingerprint}) =~ ed25519/([A-F0-9]{16})[[:space:]]202[1-9]-[01][0-9]-[0-3][0-9][[:space:]]\[S\] ]]; then echo ${BASH_REMATCH[1]}; fi)
   git config --global user.signingkey ${new_signing_key_id}
 fi
