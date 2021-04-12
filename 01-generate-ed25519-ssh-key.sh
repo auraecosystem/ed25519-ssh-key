@@ -13,7 +13,8 @@ chmod 644 ~/.ssh/config
 chmod 600 ~/.ssh/id_ed25519
 chmod 644 ~/.ssh/id_ed25519.pub
 
-# add key to github
+# add key to git/github
+git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -F /dev/null"
 # sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 # sudo dnf install gh
-# gh ssh-key add ~/.ssh/id_ed25519.pub
+gh ssh-key add ~/.ssh/id_ed25519.pub
