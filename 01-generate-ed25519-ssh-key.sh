@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# generate and add new ed25519 ssh key
+# generate new personal ed25519 ssh key
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "rob thijssen <rthijssen@gmail.com>"
+
+# generate new host cert authority (host_ca) ed25519 ssh key
+# used for signing host keys and creating host certs
+ssh-keygen -t ed25519 -f manta_host_ca -C manta.network
+
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
