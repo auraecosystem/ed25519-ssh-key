@@ -11,7 +11,7 @@ old_key_name="Rob Thijssen (https://grenade.github.io) <rthijssen@gmail.com>"
 new_key_name="rob thijssen <rthijssen@gmail.com>"
 
 # generate ed25519 master key with no expiration
-gpg --quick-generate-key ${new_key_name} ed25519 sign 0
+gpg --quick-generate-key "${new_key_name}" ed25519 sign 0
 
 old_key_fingerprint=$(if [[ $(gpg --list-keys ${old_key_name}) =~ ([A-F0-9]{40}) ]]; then echo ${BASH_REMATCH[1]}; fi)
 new_key_fingerprint=$(if [[ $(gpg --list-keys ${new_key_name}) =~ ([A-F0-9]{40}) ]]; then echo ${BASH_REMATCH[1]}; fi)
