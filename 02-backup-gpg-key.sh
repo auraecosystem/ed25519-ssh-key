@@ -7,7 +7,7 @@ backup_dir=${HOME}/key-backup
 
 # backup old gpg key
 key_name="Rob Thijssen (https://grenade.github.io) <rthijssen@gmail.com>"
-key_fingerprint=$(if [[ $(gpg --list-keys ${key_name}) =~ ([A-F0-9]{40}) ]]; then echo ${BASH_REMATCH[1]}; fi)
+key_fingerprint=$(if [[ $(gpg --list-keys "${key_name}") =~ ([A-F0-9]{40}) ]]; then echo ${BASH_REMATCH[1]}; fi)
 if [ -n "${key_fingerprint}" ]; then
   timestamp=$(date -u --iso-8601)
   mkdir -p ${backup_dir}/${timestamp}/${key_fingerprint}
