@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p ~/.ssh
+
 # generate new personal ed25519 ssh keys
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "rob thijssen <rthijssen@gmail.com>"
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_robtn -C "rob thijssen <rob@rob.tn>"
