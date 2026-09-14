@@ -1,0 +1,6 @@
+# Get a list of the top level keys in a yaml file suitable for shell loop
+yq e '(. | keys)[]' example.yaml
+# Example:
+# for key in $(yq e '(. | keys)[]' example.yaml); do
+#  echo $key
+# done
